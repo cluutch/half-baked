@@ -185,6 +185,7 @@ export function WalletProvider({ children = null as any }) {
               size="large"
               type={providerUrl === provider.url ? "primary" : "ghost"}
               onClick={onClick}
+              key ={provider.name}
               icon={
                 <img
                   alt={`${provider.name}`}

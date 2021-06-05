@@ -234,7 +234,7 @@ export const sendTransaction = async (
   connection: Connection,
   wallet: WalletAdapter,
   instructions: TransactionInstruction[],
-  signers: Account[],
+  // signers: Account[],
   awaitConfirmation = true
 ) => {
   if (!wallet?.publicKey) {
@@ -249,11 +249,16 @@ export const sendTransaction = async (
   transaction.setSigners(
     // fee payied by the wallet owner
     wallet.publicKey,
-    ...signers.map((s) => s.publicKey)
+    // ...signers.map((s) => s.publicKey)
   );
-  if (signers.length > 0) {
-    transaction.partialSign(...signers);
-  }
+  // transaction.setSigners(
+  //   // fee payied by the wallet owner
+  //   wallet.publicKey,
+  //   ...signers.map((s) => s.publicKey)
+  // );
+  // if (signers.length > 0) {
+  //   transaction.partialSign(...signers);
+  // }
   transaction = await wallet.signTransaction(transaction);
   const rawTransaction = transaction.serialize();
   let options = {

@@ -15,6 +15,10 @@ export let SWAP_PROGRAM_ID = new PublicKey(
   "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8"
 );
 
+export let HALF_BAKED_ID = new PublicKey(
+  "6EgWgFtrCsFyhsQLmpQ7sQPCXp3sY3CXEUhSkLjwpGCh"
+);
+
 export const PROGRAM_IDS = [
   {
     name: "mainnet-beta",

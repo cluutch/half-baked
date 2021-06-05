@@ -6,7 +6,7 @@ import { AccountsProvider } from "./contexts/accounts";
 import { MarketProvider } from "./contexts/market";
 import { AppLayout } from "./components/Layout";
 
-import { FaucetView, HomeView } from "./views";
+import { DataAccountView, FaucetView, HomeView } from "./views";
 
 export function Routes() {
   return (
@@ -20,6 +20,7 @@ export function Routes() {
                     <Switch>
                       <Route exact path="/" component={() => <HomeView />} />
                       <Route exact path="/faucet" children={<FaucetView />} />
+                      <Route exact path="/data-account" children={<DataAccountView />} />
                     </Switch>
                   </AppLayout>
                   </MarketProvider>
