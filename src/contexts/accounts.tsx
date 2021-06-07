@@ -629,3 +629,14 @@ const deserializeMint = (data: Buffer) => {
 
   return mintInfo as MintInfo;
 };
+
+
+const deserializeMetaData = (data: Buffer) => {
+  if (data.length !== 3200) {
+    throw new Error("Not a valid metadata account size");
+  }
+
+  let publicKey = new PublicKey(data.slice(32));
+
+  return publicKey as PublicKey;
+};
