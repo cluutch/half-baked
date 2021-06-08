@@ -5,7 +5,7 @@ import { ConnectionProvider } from "./contexts/connection";
 import { AccountsProvider } from "./contexts/accounts";
 import { AppLayout } from "./components/Layout";
 
-import { DataAccountView, FaucetView, HomeView } from "./views";
+import { NewOracleView, FaucetView, HomeView } from "./views";
 
 export function Routes() {
   return (
@@ -18,7 +18,7 @@ export function Routes() {
                   <Switch>
                     <Route exact path="/" component={() => <HomeView />} />
                     <Route exact path="/faucet" children={<FaucetView />} />
-                    <Route exact path="/data-account" children={<DataAccountView />} />
+                    <Route exact path="/oracles/new" children={<NewOracleView />} />
                   </Switch>
                 </AppLayout>
               </AccountsProvider>

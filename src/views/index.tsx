@@ -1,3 +1,3 @@
 export { HomeView } from "./home";
-export { DataAccountView } from "./data-account";
+export { NewOracleView } from "./new-oracle";
 export { FaucetView } from "./faucet";
